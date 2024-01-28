@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <title>DG Portfolio</title>
+    <style>
+      ś * {
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        background-color: rgb(5, 5, 44);
+        color: aliceblue;
+        font-family: "Poppins", sans-serif;
+      }
+      nav {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 70px;
+        background-color: rgb(40, 40, 89);
+        margin: -8px;
+      }
+      nav ul {
+        display: flex;
+        justify-content: center;
+      }
+      nav ul li {
+        list-style: none;
+        margin: 14px;
+      }
+      nav ul li a {
+        text-decoration: none;
+        color: aliceblue;
+      }
+      nav ul li a:hover {
+        text-decoration: none;
+        color: aliceblue;
+        background-color: rgb(5, 5, 44);
+        border: 1px solid black;
+        border-radius: 10px;
+        padding: 8px;
+      }
+      .left {
+        font-size: 1.4rem;
+        /* display: flex; */
+        position: initial;
+      }
+      .right {
+        font-size: 1.1rem;
+      }
+      .firstSection {
+        display: flex;
+        justify-content: space-around;
+        margin: 70px 0;
+        /* align-items: center; */
+      }
+      .firstSection > div {
+        width: 30%;
+      }
+      .leftSection {
+        /* background-color: brown; */
+        font-size: 3rem;
+        margin: 110px 0;
+        margin-left: 50px;
+      }
+      /* .rightSection{
+       
+      } */
+
+      .rightSection img {
+        width: 60%;
+        margin: 20px 0;
+        margin-left: 120px;
+      }
+      .name {
+        color: rgb(208, 158, 255);
+      }
+      button {
+        font-size: 1rem;
+        border: 2px solid black;
+        border-radius: 6px;
+        margin: 4px;
+        margin-left: 0;
+        padding: 10px;
+        background-color: cornflowerblue;
+      }
+      button:hover {
+        background-color: rgb(48, 195, 195);
+        color: black;
+      }
+      a {
+        text-decoration: none;
+        color: black;
+      }
+      #element {
+        font-size: 1.4rem;
+        color: rgb(220, 61, 114);
+      }
+      .secondSection {
+        max-width: 80vh;
+        margin-left: 160px;
+        height: 100vh;
+      }
+      .secondSection h1 {
+        font-size: 2rem;
+        margin-top: 0;
+      }
+      .secondSection .box {
+        /* background: white; */
+        width: 130vh;
+        height: 1px;
+        margin: -9px 54px;
+      }
+      .thirdSection {
+        max-width: 80vh;
+        margin-left: 160px;
+        height: 100vh;
+      }
+      .thirdSection h1 {
+        font-size: 2rem;
+        margin-top: 0;
+      }
+      .thirdSection .box {
+        /* background: white; */
+        width: 100vh;
+        height: 1px;
+        margin: -9px 54px;
+      }
+      .fourthSection {
+        max-width: 80vh;
+        margin-left: 160px;
+        height: 30vh;
+      }
+      .fourthSection h1 {
+        font-size: 2rem;
+        margin-top: 0;
+      }
+      .fourthSection .box {
+        background: rgb(172, 172, 100);
+    width: 120vh;
+    height: 68px;
+    margin: -9px 54px;
+      }
+      main hr {
+        border: 0;
+        background-color: azure;
+        height: 0.2px;
+        margin: 40px 120px;
+        margin-top: -30px;
+      }
+      .text-gray {
+        color: gray;
+      }
+      .container {
+        width: 90%; /* Full width */
+        background-color: #ddd; /* Grey background */
+      }
+
+      .skills {
+        text-align: right; /* Right-align text */
+        padding-top: 0px;
+        padding-bottom: 0px;
+        color: white; /* White text color */
+      }
+
+      .html {
+        width: 90%;
+        background-color: #04aa6d;
+      } /* Green */
+      .css {
+        width: 90%;
+        background-color: #2196f3;
+      } /* Blue */
+      .js {
+        width: 80%;
+        background-color: #f44336;
+      } /* Red */
+      .php {
+        width: 78%;
+        background-color: #808080;
+      } /* Dark Grey */
+      .react {
+        width: 70%;
+        background-color: #515a3c;
+      } /* Dark Grey */
+
+      .node {
+        width: 70%;
+        background-color: #e659b2;
+      } /* Dark Grey */
+
+      .mongo {
+        width: 75%;
+        background-color: #dd7d29;
+      } /* Dark Grey */
+
+      .iot {
+        width: 80%;
+        background-color: #7e29ab;
+      } /* Dark Grey */
+
+      .experience-details-container {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+      
+      }
+      .color-container {
+        border-color: rgb(163, 163, 163);
+        background: rgb(250, 250, 250);
+      }
+      .about-containers,
+      .about-details-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        /* margin: auto; */
+      }
+      .details-container {
+        padding: 1rem;
+        flex: 1;
+        background: rgba(202, 184, 184, 0.816);
+        border-radius: 2rem;
+        border: rgb(53, 53, 53) 0.1rem solid;
+        border-color: rgb(163, 163, 163);
+        text-align: center;
+        margin: 30px;
+        width: 100%;
+      }
+      .article-container {
+        display: flex;
+        text-align: initial;
+        flex-wrap: wrap;
+        flex-direction: row;
+        gap: 2.5rem;
+        justify-content: space-around;
+      }
+      .project-img {
+        border-radius: 2rem;
+        width: 90%;
+        height: 90%;
+      }
+      .experience-sub-title {
+        color: rgb(85, 85, 85);
+        font-weight: 600;
+        font-size: 1.75rem;
+        margin-bottom: 2rem;
+      }
+      .project-title {
+        margin: 1rem;
+        color: black;
+      }
+      .btn-container {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+      }
+      .btn-color-1,
+      .btn-color-2 {
+        border: rgb(53, 53, 53) 0.1rem solid;
+      }
+
+      .btn-color-1:hover,
+      .btn-color-2:hover {
+        cursor: pointer;
+      }
+
+      .btn-color-1,
+      .btn-color-2:hover {
+        background: rgb(53, 53, 53);
+        color: white;
+      }
+
+      .btn-color-1:hover {
+        background: rgb(0, 0, 0);
+      }
+
+      .btn-color-2 {
+        background: none;
+      }
+
+      .btn-color-2:hover {
+        border: rgb(255, 255, 255) 0.1rem solid;
+      }
+
+      .btn-container {
+        gap: 1rem;
+      }
+      /* #second{display: none;} */
+
+
+
+      #contact {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 70vh;
+}
+
+.contact-info-upper-container {
+  display: flex;
+  justify-content: center;
+  border-radius: 2rem;
+  border: rgb(53, 53, 53) 0.1rem solid;
+  border-color: rgb(163, 163, 163);
+  background: (250, 250, 250);
+  margin: 2rem auto;
+  padding: 0.5rem;
+}
+
+.contact-info-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  margin: 1rem;
+}
+
+.contact-info-container p {
+  color: #ddd;
+  font-size: larger;
+}
+
+.contact-icon {
+  cursor: default;
+}
+
+.email-icon {
+  height: 2.5rem;
+}
+    </style>
+    <script>
+      function learn(){
+        let a=document.getElementById("second").innerHTML="In this project, we are giving introduction of our dancing Website. Servvices which is provided by academy. Also we included contact page by which user can contact academy.";
+        a.style.display="block";
+        }
+      function learn2(){
+        let b=document.getElementById("first").innerHTML="In this project, we trying to digitalize registration process of school.goverment can access data and accordingly launch scheme for student also goverment can register school in portal.Institute can add student detail as well as update student result. You can see this by clicking on live Demo.";
+        b.style.display="block";
+      }
+      function learn3(){
+        let c=document.getElementById("third").innerHTML="The 'Smart Fence' is an IoT-based farm surveillance system designed to fortify agricultural security against animal intrusion. Integrating the ESP32-CAM module for image capture and PIR sensors for motion detection, the system promptly responds to animal movement within the farm perimeter. Once motion is detected, the ESP32-CAM captures a photograph, and through Telegram integration, transmits the image in real-time to the farm owner's account, facilitating swift assessment  of potential threats.";
+        c.style.display="block";
+      }
+      </script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="left">Darshan Vasani</div>
+        <div class="right">
+          <ul>
+            <li><a href="#firstSection">About Me</a></li>
+            <li><a href="#secondSection">Skills</a></li>
+            <li><a href="#thirdSection">Project</a></li>
+            <li><a href="#fourthSection">Contact Me</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <main>
+      <section class="firstSection" id="firstSection">
+        <div class="leftSection">
+          Hi! I'm <span class="name">Darshan</span>
+          <div style="font-size: 1.3rem; margin-top: 8px">
+            A passionate <span id="element"></span> having an experience of
+            building Web application with JavaScript/ Reactjs/ Nodejs and some
+            other libraries and frameworks
+          </div>
+
+          <a href="/resume.pdf" download target="_blank">
+            <button class="resume">Download Resume</button></a
+          >
+          <button class="linkedin">
+            <a
+              href="https://www.linkedin.com/in/darshan-patel-164a4623a/"
+              target="_blank"
+              >LinkedIn Profile</a
+            >
+          </button>
+        </div>
+        <div class="rightSection">
+          <img src="bg.png" alt="my bag" />
+        </div>
+      </section>
+      <hr />
+      <section class="secondSection" id="secondSection">
+        <span class="text-gray">Technology which i know</span>
+        <h1>Skills</h1>
+
+        <div class="box">
+          <p>HTML</p>
+          <div class="container">
+            <div class="skills html">90%</div>
+          </div>
+
+          <p>CSS</p>
+          <div class="container">
+            <div class="skills css">90%</div>
+          </div>
+
+          <p>JavaScript</p>
+          <div class="container">
+            <div class="skills js">80%</div>
+          </div>
+
+          <p>PHP</p>
+          <div class="container">
+            <div class="skills php">78%</div>
+          </div>
+
+          <p>Mongo</p>
+          <div class="container">
+            <div class="skills mongo">75%</div>
+          </div>
+
+          <p>React js</p>
+          <div class="container">
+            <div class="skills react">70%</div>
+          </div>
+
+          <p>Node js</p>
+          <div class="container">
+            <div class="skills node">70%</div>
+          </div>
+
+          <p>IoT</p>
+          <div class="container">
+            <div class="skills iot">75%</div>
+          </div>
+        </div>
+      </section>
+      <hr />
+      <section class="thirdSection" id="thirdSection">
+        <span class="text-gray">Browse my Recent Project</span>
+        <h1>Projects</h1>
+        <div class=" box">
+          <div class="about-containers">
+            <div class="details-container color-container">
+              <div class="article-container">
+               
+              </div>
+              <h2 class="experience-sub-title project-title">Digitalization</h2>
+              <div class="btn-container">
+                <p id="first" style="color:black;font-size: 13px;"></p>
+                <br>
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="learn2()"
+                >
+                  Learn More
+                </button>
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="location.href='https://aknayani.com/'"
+                >
+                  Live Demo
+                </button>
+              </div>
+            </div>
+            <div class="details-container color-container">
+              <div class="article-container">
+               
+              </div>
+              <h2 class="experience-sub-title project-title">Dance Academy Website</h2>
+              <div class="btn-container">
+                <p id="second" style="color:black;font-size: 13px;"></p>
+                <br>
+                <button
+                  class="btn btn-color-2 project-btn" 
+                  onclick="learn()"
+                >
+                  Learn More
+                </button>
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="location.href='https://github.com/Dgpatel82/Dgdanceacademy.git'"
+                >
+                  Git-Hub
+                </button>
+              </div>
+            </div>
+            <div class="details-container color-container">
+              <div class="article-container">
+                
+              </div>
+              <h2 class="experience-sub-title project-title">Smart Fence    </h2>
+              <div class="btn-container">
+                <p id="third" style="color:black;font-size: 13px;"></p>
+                <br>
+                <button
+                  class="btn btn-color-2 project-btn"
+                  onclick="learn3()"
+                >
+                  Learn More
+                </button>
+               
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+      </section>
+      <hr>
+      <section class="fourthSection" id="fourthSection">
+        <span class="text-gray">Get in Touch</span>
+        <h1>Contact Me</h1>
+        <div class="contact-info-upper-container box">
+          <div class="contact-info-container">
+            <img
+              src="/email.png"
+              alt="Email icon"
+              class="icon contact-icon email-icon"
+            />
+            <p><a href="mailto:darshanvasani13@gmail.com" style="color:hover blue;">darshanvasani13@gmail.com</a></p>
+          </div>
+          <div class="contact-info-container">
+            <img
+              src="/linkedin.png"
+              alt="LinkedIn icon"
+              class="email-icon contact-icon"
+            />
+            <p><a href="https://www.linkedin.com/in/darshan-patel-164a4623a/">LinkedIn</a></p>
+          </div>
+        </div>
+      </section>
+      <hr>
+    </main>
+    <footer>
+      <nav>
+        <div class="nav-links-container">
+          <ul>
+            <li><a href="#firstSection">About Me</a></li>
+            <li><a href="#secondSection">Skills</a></li>
+            <li><a href="#thirdSection">Project</a></li>
+            <li><a href="#fourthSection">Contact Me</a></li>
+          </ul>
+        </div>
+      </nav>
+      <p style="text-align: center;background-color: black;height: 20px;padding: 20px;">Copyright &#169; 2024 Darshan Vasani. All Rights Reserved.</p>
+    </footer>
+    <script>
+      var typed = new Typed("#element", {
+        strings: [
+          "Web Developer",
+          "Web Developer ",
+          "Web Developer",
+          "Web Developer",
+        ],
+        typeSpeed: 70,
+      });
+    </script>
+  </body>
+</html>
